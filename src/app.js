@@ -12,6 +12,7 @@ const app = express()
 const PORT = 5000
 
 dotenv.config()
+app.use(cors('*'))
 connectDB()
 app.use(express.json())
 app.use(cookieParser())

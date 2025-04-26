@@ -21,23 +21,22 @@ export const createNewUser = async (
   email,
   phone,
   address,
-  longitude,
-  latitude,
   userType,
   password
 ) => {
   const newUser = new User({
-    name,
-    email,
-    phone,
-    address,
-    permanentLocation: {
-      type: 'Point',
-      coordinates: [longitude, latitude],
-    },
-    userType,
-    password,
+    name: name,
+    email: email,
+    phone: phone,
+    address: address,
+    // permanentLocation: {
+    //   type: 'Point',
+    //   coordinates: [longitude, latitude],
+    // },
+    userType: userType,
+    password: password,
   })
+  console.log(newUser)
 
   await newUser.save()
 

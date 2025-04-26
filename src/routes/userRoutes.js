@@ -1,10 +1,5 @@
 import express from 'express'
-import {
-  deactivateByUser,
-  login,
-  logout,
-  register,
-} from '../controllers/userController.js'
+import { login, logout, register } from '../controllers/userController.js'
 import {
   validateLogin,
   validateRegistration,
@@ -16,6 +11,6 @@ const router = express.Router()
 router.post('/register', register)
 router.post('/login', login)
 router.post('/logout', logout)
-router.post('/deactivationByUser', protect, deactivateByUser)
+// router.post('/deactivationByUser', protect, deactivateByUser)
 
 export default router

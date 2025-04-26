@@ -34,4 +34,4 @@ const sosSchema = new mongoose.Schema({
 })
 
 const SOS = mongoose.model('SOS', sosSchema)
-module.exports = SOS
+export default SOS
