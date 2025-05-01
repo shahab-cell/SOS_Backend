@@ -85,7 +85,7 @@ export const findNearest = async (req, res) => {
             type: 'Point',
             coordinates: [longitude, latitude],
           },
-          // $maxDistance: 10000, // optional, meters
+          $maxDistance: 10000, // optional, meters
         },
       },
     })
@@ -100,6 +100,7 @@ export const findNearest = async (req, res) => {
     return res.json({
       latitude: responderLat,
       longitude: responderLng,
+      email: nearestResponder.email,
     })
   } catch (err) {
     console.error('Error finding nearest responder:', err)
